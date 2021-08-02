@@ -1,0 +1,67 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: head('Novo Person')}"></head>
+
+<body>
+
+    <header th:replace="~{fragmentos :: header('Person #' + ${Person.id})}"></header>
+    <main>
+        <div class="container md-4">
+            <div class="col-12">
+        <span th:styleappend="${(param.erro == null || param.mensagem == null) ? 'display: none;' : ''}"
+              th:classappend="${(param.erro != null && param.erro) ? 'error-message' : 'success-message'}"
+              th:text="${param.mensagem != null ? param.mensagem : ''}">Uma mensagem bem legal!</span>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <b>Nome:</b> <span th:text="${Person.nome}"></span><br/>
+                    <b>Sobre nome:</b> <span th:text="${Person.segundoNome}"></span><br/>
+                    <b>CPF:</b> <span th:text="${Person.numeroCpf}"></span><br/>
+                    <b>Data de Nascimento:</b> <span th:text="${Person.dataNascimento}"></span><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <a th:href="@{/persons/{personId}/edit(personId = ${Person.id})}">Editar</a>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-14">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Numero Telefone</th>
+                            <th scope="col">Tipo Telefone</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="Phone : ${Phone}">
+                            <th class="col-1" scope="row" th:text="${Phone.getId()}">ID</th>
+                            <td class="col-2" th:text="${Phone.getNumeroPhone}">Numero Telefone</td>
+                            <td class="col-2" th:text="${Phone.getTipoPhone}">Tipo Telefone</td>
+                            <td class="col-1"><a th:href="@{/persons/phones/{phoneId}/edit(phoneId = ${Phone.id})}">Editar</a></td>
+                            <td class="col-1"><a th:href="@{/persons/phones/{phoneId}/delete(phoneId = ${Phone.id})}">Deletar</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <a th:href="@{/persons/phones/{personId}/new(personId = ${Person.id})}">Novo Telefone</a>
+                    <a href="/persons">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

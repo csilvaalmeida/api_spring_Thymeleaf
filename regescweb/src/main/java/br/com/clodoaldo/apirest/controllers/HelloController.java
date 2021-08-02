@@ -1,4 +1,4 @@
-package br.com.xavecoding.regescweb.controllers;
+package br.com.clodoaldo.apirest.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ public class HelloController {
     @GetMapping("/hello")
     public ModelAndView hello() {
         ModelAndView mv = new ModelAndView("hello");  // nome do arquivo html a ser renderizado/exibido
-        mv.addObject("nome", "Maria!");
+        mv.addObject("nome", "Clodoaldo!");
         return mv;  // o Spring vai renderizar o arquivo templates/hello.html
     }
 

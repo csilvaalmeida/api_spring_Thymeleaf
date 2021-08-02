@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: head('Lista de Telefones')}"></head>
+
+
+<div class="container" th:fragment="form(requisicaoFormPhone, action)">
+    <div class="row">
+        <form th:object="${requisicaoFormPhone}" th:action="${action}" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Telefone</label>
+                <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{numeroPhone}">
+                <div class="invalid-feedback" th:errors="*{numeroPhone}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tipo Telefone</label>
+                <select class="form-select" th:field="*{tipoPhone}">
+                    <option th:each="tipoPhone : ${listaTipoTelefone}"
+                            th:value="${tipoPhone}" th:text="${tipoPhone}"></option>
+                </select>
+            </div>
+            <div class="row" th:Person ="${Person}"></div>
+            <button class="btn btn-primary" type="submit">Submeter</button>
+            <a href="javascript:history.back()">Voltar</a>
+        </form>
+    </div>
+
+</div>
+</html>

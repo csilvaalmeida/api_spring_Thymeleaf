@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: head('Lista de Persons')}"></head>
+
+
+<div class="container" th:fragment="form(requisicaoFormPerson, action)">
+    <div class="row">
+        <form th:object="${requisicaoFormPerson}" th:action="${action}" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{nome}">
+                <div class="invalid-feedback" th:errors="*{nome}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sobre Nome</label>
+                <input class="form-control" th:errorclass="is-invalid"  type="text" th:field="*{segundoNome}">
+                <div class="invalid-feedback" th:errors="*{segundoNome}"></div>
+            </div>
+            <div class="col-sm-2">
+                <label class="form-label">CPF</label>
+                <input class="form-control" th:errorclass="is-invalid"  type="text" th:field="*{numeroCpf}">
+                <div class="invalid-feedback" th:errors="*{numeroCpf}"></div>
+            </div>
+            <div class="col-sm-2">
+                <label class="form-label">Data de Nascimento</label>
+                <input class="form-control" th:errorclass="is-invalid"  type="text" th:field="*{dataNascimento}">
+                <div class="invalid-feedback" th:errors="*{dataNascimento}"></div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submeter</button>
+            <a href="javascript:history.back()">Voltar</a>
+        </form>
+    </div>
+</div>

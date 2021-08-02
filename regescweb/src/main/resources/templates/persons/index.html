@@ -1,11 +1,12 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragmentos :: head('Lista de Professores')}"></head>
+<head th:replace="~{fragmentos :: head('Lista de Pessoas')}"></head>
 
 <body>
-<header th:replace="~{fragmentos :: header('Lista de Professores')}"></header>
+<header th:replace="~{fragmentos :: header('Lista de Pessoas')}"></header>
 
-<div class="container mb-4">
+<div class="container md-4">
+
     <div class="col-12">
         <span th:styleappend="${(param.erro == null || param.mensagem == null) ? 'display: none;' : ''}"
               th:classappend="${(param.erro != null && param.erro) ? 'error-message' : 'success-message'}"
@@ -15,35 +16,37 @@
 
 <div class="container mt-4">
     <div class="row">
-        <div class="col-12">
+        <div class="col-14">
             <table class="table table-hover">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Salário</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Sobrenome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="professor : ${professores}">
-                    <th class="col-1" scope="row" th:text="${professor.getId()}">ID</th>
-                    <td class="col-4" th:text="${professor.nome}">Nome do Professor</td>
-                    <td class="col-2" th:text="${professor.salario}">Salário</td>
-                    <td class="col-2" th:text="${professor.statusProfessor.toString()}">STATUS</td>
-                    <td class="col-1"><a th:href="@{/professores/{professorId}(professorId = ${professor.id})}">Detalhes</a></td>
-                    <td class="col-1"><a th:href="@{/professores/{professorId}/edit(professorId = ${professor.id})}">Editar</a></td>
-                    <td class="col-1"><a th:href="@{/professores/{professorId}/delete(professorId = ${professor.id})}">Deletar</a></td>
+                <tr th:each="person : ${persons}">
+                    <th class="col-1" scope="row" th:text="${person.getId()}">ID</th>
+                    <td class="col-4" th:text="${person.getNome}">Nome da Pessoa</td>
+                    <td class="col-2" th:text="${person.getSegundoNome}">Sobre Nome</td>
+                    <td class="col-2" th:text="${person.getNumeroCpf}">CPF</td>
+                    <td class="col-2" th:text="${person.getDataNascimento}">Data de Nascimento</td>
+                    <td class="col-1"><a th:href="@{/persons/{personId}(personId = ${person.id})}">Telefones</a></td>
+                    <td class="col-1"><a th:href="@{/persons/{personId}/edit(personId = ${person.id})}">Editar</a></td>
+                    <td class="col-1"><a th:href="@{/persons/{personId}/delete(personId = ${person.id})}">Deletar</a></td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
     <div class="row">
-        <a href="/professores/new">Novo Professor</a>
+        <a href="/persons/new">Nova Persoa</a>
     </div>
 </div>
 

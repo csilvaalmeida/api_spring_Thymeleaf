@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aeefaf68-6c0b-4354-933b-d83767e7e7c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/persons/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/controllers/ProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/dto/RequisicaoFormProfessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/dto/RequisicaoFormPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/models/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/models/StatusProfessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/models/StatusPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/repositories/ProfessorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/java/br/com/xavecoding/regescweb/repositories/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/fragmentos.html" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/fragmentos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/professores/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/persons/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/professores/fragmentos.html" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/persons/fragmentos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/professores/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/persons/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/professores/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/regescweb/src/main/resources/templates/persons/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regescweb/src/main/resources/templates/professores/show.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vzS0duZj8S4vTH3vWc9oHcexU4" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aeefaf68-6c0b-4354-933b-d83767e7e7c7" name="Default Changelist" comment="" />
+      <created>1627563203107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627563203107</updated>
+    </task>
+    <servers />
+  </component>
+</project>
